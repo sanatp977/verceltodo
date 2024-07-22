@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Todo } from './Todo';
-import { TodoForm } from './TodoForm';
+import { Todo } from './todo';
+import { TodoForm } from './todoForm';
 import { v4 as uuidv4 } from 'uuid';
 import styles from "@/styles/Home.module.css";
 
