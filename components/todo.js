@@ -3,8 +3,9 @@ import { FaRegCircle, FaCircle } from "react-icons/fa";
 import Confetti from 'react-confetti';
 import { useWindowSize } from './useWindowSize';
 import styles from "@/styles/Home.module.css";
+import { EditTodoForm } from './edittodoform';
 
-export const Todo = ({ task, deleteTodo, toggleComplete }) => {
+export const Todo = ({ task, deleteTodo, toggleComplete, editTodo }) => {
     const [showConfetti, setShowConfetti] = useState(false);
     const { width, height } = useWindowSize();
 
@@ -21,7 +22,7 @@ export const Todo = ({ task, deleteTodo, toggleComplete }) => {
         <div className={styles.todo}>
             <p
                 className={`${task.completed ? styles.completed : styles.incompleted}`}
-                onClick={() => handleToggleComplete(task.id)}
+                onClick={() => editTodo(task.id)}
             >
                 {task.task}
             </p>
