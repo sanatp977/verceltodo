@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styles from "@/styles/Home.module.css";
 
-export const EditTodoForm = ({editTodo, task}) => {
+export const EditTodoForm = ({ editTodo, task }) => {
     const [value, setValue] = useState(task.task);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (value) {
-            editTodo(value,task.id);
+            editTodo(value, task.id);e
             setValue('');
         }
     };
